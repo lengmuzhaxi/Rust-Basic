@@ -9,10 +9,13 @@
 // I AM NOT DONE
 
 fn main() {
-    let mut x = 100;
-    let y = &mut x;
-    let z = &mut x;
-    *y += 100;
-    *z += 1000;
+    {
+        let y = &mut x;
+        *y += 100; // 使用完 `y`
+    }
+    {
+        let z = &mut x;
+        *z += 1000; // 使用 `z`
+    }
     assert_eq!(x, 1200);
 }
