@@ -27,7 +27,7 @@ pub enum Command {
     Trim,
     Append(usize),
 }
-
+//修改的内容
 mod my_module {
     use super::Command;
         pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
