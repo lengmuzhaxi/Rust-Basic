@@ -26,20 +26,7 @@ pub struct ReportCard {
 
 impl ReportCard {
     pub fn print(&self) -> String {
-        let letter_grade = match self.grade {
-            4.0 => "A+",
-            3.7..=3.9 => "A",
-            3.3..=3.6 => "A-",
-            3.0..=3.2 => "B+",
-            2.7..=2.9 => "B",
-            2.3..=2.6 => "B-",
-            2.0..=2.2 => "C+",
-            1.7..=1.9 => "C",
-            1.3..=1.6 => "C-",
-            1.0..=1.2 => "D",
-            0.0..=0.9 => "F",
-            _ => "Invalid grade",
-        };
+        
         format!("{} ({}) - achieved a grade of {}",
             &self.student_name, &self.student_age, &self.grade)
     }
